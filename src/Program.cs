@@ -1,7 +1,7 @@
 ﻿
 class Program
 {
-     static string TempConvert(int temperature,string unit)
+     static string TempConvert(double temperature,string unit)
      {
        if(unit=="F")
     {
@@ -17,8 +17,13 @@ class Program
 
     public static void Main(string[] args)
      {
-        Console.WriteLine(TempConvert(32,"F"));
-         Console.WriteLine(TempConvert(100,"C"));
+        Console.WriteLine("Enter a temperature and its unit (C or F):");
+        
+       double temperature = Convert.ToDouble(Console.ReadLine());
+       string unit = Console.ReadLine();
+
+        Console.WriteLine("Converted: "+temperature+" "+unit+" = "+TempConvert( temperature,unit));
+       
         
     }
 }
