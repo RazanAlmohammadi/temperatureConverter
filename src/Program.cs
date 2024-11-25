@@ -43,6 +43,7 @@ class Program
                 Console.WriteLine("Invalid temperature input. Please enter a numeric value.");
                 continue; 
             }
+            
             string unit = Console.ReadLine();
             Console.WriteLine(TempConvert(temperature, unit));
 
